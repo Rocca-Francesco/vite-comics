@@ -11,8 +11,8 @@ export default {
 
 <template>
   <AppHeader />
-  <AppFooter />
   <AppMain />
+  <AppFooter />
 </template>
 
 <style scoped></style>
