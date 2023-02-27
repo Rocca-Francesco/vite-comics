@@ -54,7 +54,25 @@
 
 
     <section id="utilsSocials">
-
+      <button type="button">SIGN-UP NOW!</button>
+      <div>
+        <span>FOLLOW US</span>
+        <span>
+          <img src="/footer/footer-facebook.png" alt="facebook">
+        </span>
+        <span>
+          <img src="/footer/footer-twitter.png" alt="twitter">
+        </span>
+        <span>
+          <img src="/footer/footer-youtube.png" alt="youtube">
+        </span>
+        <span>
+          <img src="/footer/footer-pinterest.png" alt="pinterest">
+        </span>
+        <span>
+          <img src="/footer/footer-periscope.png" alt="periscope">
+        </span>
+      </div>
     </section>
   </footer>
 </template>
@@ -91,5 +109,20 @@
   align-items: center;
 
   background-color: grey;
+
+  button {
+    background-color: grey;
+    border: 2px solid blue;
+    padding: 0.4rem;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+
+    span {
+      padding: 0.2rem;
+    }
+  }
 }
 </style>
