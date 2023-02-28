@@ -1,10 +1,21 @@
 <script>
+export default {
+  props: {
+    comicsList: Array,
+  }
+}
 </script>
 
 <template>
   <main>
-    <section id="templateProvvisorio">
-      <span>Content goes here</span>
+    <jumbotron>
+    </jumbotron>
+
+    <section id="lastComics">
+      <div v-for="comics in comicsList">
+        <img :src="comics.thumb" alt="">
+        <h4>{{ comics.series }}</h4>
+      </div>
     </section>
 
     <section id="shoppingZone">
@@ -30,26 +41,44 @@
 
 <style lang="scss" scoped>
 @use "../assets/scss/partials/mixins.scss" as *;
+@use "../assets/scss/partials/variables.scss" as *;
 
-#templateProvvisorio {
+
+jumbotron {
+  background-image: url(../../public/jumbotron.jpg);
+  display: block;
+  height: 15rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#lastComics {
   @include alignCenter ();
+  flex-wrap: wrap;
 
-  height: 5rem;
   padding: 1rem 3rem;
 
-  background-color: black;
+  background-color: #1c1c1c;
   font-weight: bold;
   color: white;
+
+  div {
+    width: calc(100%/6);
+
+    img {
+      width: 3rem;
+    }
+
+
+  }
 }
 
 #shoppingZone {
   height: 5rem;
   padding: 1rem 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include alignCenter ();
 
-  background-color: cornflowerblue;
+  background-color: $blueDC;
   font-weight: bold;
   color: white;
 

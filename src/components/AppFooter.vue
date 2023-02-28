@@ -79,6 +79,7 @@
 
 <style lang="scss" scoped>
 @use "../assets/scss/partials/mixins.scss" as *;
+@use "../assets/scss/partials/variables.scss" as *;
 
 #footerLinks {
   padding: 1rem 3rem;
@@ -97,7 +98,7 @@
 
   ul {
     list-style: none;
-    color: lightgray;
+    color: #797979;
     padding-top: 0rem;
     font-size: 0.8rem
   }
@@ -106,15 +107,16 @@
 #utilsSocials {
   @include alignCenter ();
 
-  height: 3rem;
+  height: 4rem;
   padding: 1rem 3rem;
 
-  background-color: grey;
+  background-color: #303030;
 
   button {
-    background-color: grey;
-    border: 2px solid blue;
+    background-color: #303030;
+    border: 2px solid $blueDC;
     padding: 0.4rem;
+    color: white;
   }
 
   div {
@@ -123,6 +125,7 @@
 
     span {
       padding: 0.2rem;
+      color: $blueDC;
 
       img {
         width: 1.5rem;
