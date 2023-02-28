@@ -24,13 +24,13 @@
 </template>
 
 <style lang="scss" scoped>
+@use "../assets/scss/partials/mixins.scss" as *;
+
 header {
-  width: calc(100vw - 6rem);
+  @include alignCenter ();
+
   height: 5rem;
   padding: 1rem 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 #logo {

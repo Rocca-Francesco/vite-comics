@@ -78,8 +78,9 @@
 </template>
 
 <style lang="scss" scoped>
+@use "../assets/scss/partials/mixins.scss" as *;
+
 #footerLinks {
-  width: calc(100vw - 6rem);
   padding: 1rem 3rem;
   background-image: url(/footer/footer-bg.jpg);
   display: flex;
@@ -91,22 +92,22 @@
   h2 {
     font-size: 1rem;
     color: white;
+    padding: 0.5rem 0;
   }
 
   ul {
     list-style: none;
     color: lightgray;
-    padding: 0;
+    padding-top: 0rem;
+    font-size: 0.8rem
   }
 }
 
 #utilsSocials {
-  width: calc(100vw - 6rem);
+  @include alignCenter ();
+
   height: 3rem;
   padding: 1rem 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
   background-color: grey;
 
@@ -122,6 +123,10 @@
 
     span {
       padding: 0.2rem;
+
+      img {
+        width: 1.5rem;
+      }
     }
   }
 }
